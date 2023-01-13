@@ -33,3 +33,4 @@ Once all prompts are answered, the password should be generated and displayed in
 ## Method
 
 1. Added prompt to function for password options
+2. Added function for getting a random element from an array
