@@ -90,7 +90,9 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  let length = parseInt(
+    prompt("How many characters should your password contain?")
+  )
 }
 
 // Function for getting a random element from an array
