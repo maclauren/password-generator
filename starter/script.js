@@ -117,18 +117,18 @@ function getPasswordOptions() {
     "Press OK to include numeric characters"
   )
 
-  let hasLowerCaseCharacters = confirm(
+  let hasLowerCasedCharacters = confirm(
     "Press OK to include lower case characters"
   )
 
-  let hasUpperCaseCharacters = confirm(
+  let hasUpperCasedCharacters = confirm(
     "Press OK to include upper case characters"
   )
 
   if(hasSpecialCharacters === false && 
     hasNumericCharacters === false && 
-    hasLowerCaseCharacters === false && 
-    hasUpperCaseCharacters === false) {
+    hasLowerCasedCharacters === false && 
+    hasUpperCasedCharacters === false) {
       alert(`Must select at least one character type`);
       return;
     }
@@ -137,8 +137,8 @@ function getPasswordOptions() {
       length: length,
       hasNumericCharacters: hasNumericCharacters,
       hasSpecialCharacters: hasSpecialCharacters,
-      hasLowerCaseCharacters: hasLowerCaseCharacters,
-      hasUpperCaseCharacters: hasUpperCaseCharacters,
+      hasLowerCasedCharacters: hasLowerCasedCharacters,
+      hasUpperCasedCharacters: hasUpperCasedCharacters,
     }
 
     console.log(passwordOptions);
@@ -159,6 +159,35 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
   let options = getPasswordOptions();
+  console.log(options);
+  let result = []
+
+  let possibleCharacter = []
+
+  let guaranteedCharacter = []
+
+  if(options.hasNumericCharacters) {
+    possibleCharacter = possibleCharacter.concat(numericCharacters);
+    guaranteedCharacter.push(getRandom(numericCharacters))
+  }
+
+  if(options.hasSpecialCharacters) {
+    possibleCharacter = possibleCharacter.concat(specialCharacters);
+    guaranteedCharacter.push(getRandom(specialCharacters))
+  }
+
+  if(options.hasLowerCasedCharacters){
+    possibleCharacter = possibleCharacter.concat(lowerCasedCharacters);
+    guaranteedCharacter.push(getRandom(lowerCasedCharacters));
+  }
+
+  if(options.hasUpperCasedCharacters){
+    possibleCharacter = possibleCharacter.concat(upperCasedCharacters);
+    guaranteedCharacter.push(getRandom(upperCasedCharacters));
+  }
+
+
+
 }
 
 // Get references to the #generate element
