@@ -192,7 +192,13 @@ function generatePassword() {
     result.push(generated);
   }
 
+  for(let index = 0; index < guaranteedCharacter.length; index++){
+    result[index] = guaranteedCharacter[index]
+  }
+
   console.log(result);
+
+  return result.join("")
 
 }
 
