@@ -186,7 +186,13 @@ function generatePassword() {
     guaranteedCharacter.push(getRandom(upperCasedCharacters));
   }
 
+  for(let index = 0; index < options.length; index++){
+    var generated = getRandom(possibleCharacter);
+    console.log(generated)
+    result.push(generated);
+  }
 
+  console.log(result);
 
 }
 
