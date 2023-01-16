@@ -133,7 +133,17 @@ function getPasswordOptions() {
       return;
     }
 
+    let passwordOptions = {
+      length: length,
+      hasNumericCharacters: hasNumericCharacters,
+      hasSpecialCharacters: hasSpecialCharacters,
+      hasLowerCaseCharacters: hasLowerCaseCharacters,
+      hasUpperCaseCharacters: hasUpperCaseCharacters,
+    }
 
+    console.log(passwordOptions);
+
+    return passwordOptions;
 
 }
 
