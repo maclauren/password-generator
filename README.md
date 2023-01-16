@@ -34,3 +34,8 @@ Once all prompts are answered, the password should be generated and displayed in
 
 1. Added prompt to function for password options
 2. Added function for getting a random element from an array
+3. Added character options (numeric, special, lower case, upper case)
+4. Added boolean logic to generating characters
+5. Added generation options for each type of character
+6. Added logic to generate characters randomly
+7. Added logic to join all random results together
